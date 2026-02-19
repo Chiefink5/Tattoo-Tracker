@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tattoo Tracker</title>
+
+<style>
+body{
+background:#0f1411;
+color:white;
+font-family:sans-serif;
+margin:0;
+padding:20px;
+}
+
+button{
+padding:10px;
+margin-top:8px;
+background:#1f6f50;
+color:white;
+border:none;
+}
+
+.entry{
+background:#1a241f;
+margin:10px 0;
+padding:10px;
+border-left:4px solid gold;
+}
+</style>
+</head>
+<body>
+
+<h2>Tattoo Tracker</h2>
+
+<button onclick="openForm()">+ Add Entry</button>
+
+<div id="form" style="display:none; margin-top:20px;">
+
+<input type="date" id="date"><br>
+<input type="text" id="client" placeholder="Client Name"><br>
+<input type="number" id="total" placeholder="Total Price"><br>
+<input type="number" id="deposit" placeholder="Deposit"><br>
+
+<div id="sessions"></div>
+<button onclick="addSession()">+ Additional Session</button><br>
+
+<input type="file" id="image"><br>
+
+<button onclick="saveEntry()">Save</button>
+<button onclick="closeForm()">Cancel</button>
+
+</div>
+
+<hr>
+
+<div id="entries"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
